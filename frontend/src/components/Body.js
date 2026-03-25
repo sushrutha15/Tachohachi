@@ -14,6 +14,7 @@ const Body = () => {
   useEffect(() => {
     setMenu(menuData);
     setTimeout(() => setIsVisible(true), 300);
+    document.title = "Miyato Hibachi Dallas";
   }, []);
 
   const popularDishes = menu.slice(0, 6);

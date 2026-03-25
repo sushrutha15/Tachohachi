@@ -6,6 +6,7 @@ const About = () => {
 
   useEffect(() => {
     setTimeout(() => setIsVisible(true), 300);
+      document.title = "About | Miyato Hibachi Dallas";
   }, []);
 
   const stats = [

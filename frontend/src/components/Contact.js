@@ -64,6 +64,7 @@ const Contact = () => {
 
   useEffect(() => {
     setTimeout(() => setIsVisible(true), 300);
+    document.title = "Contact | Miyato Hibachi Dallas";
   }, []);
 
   const handleChange = (e) => {

@@ -267,6 +267,10 @@ const BookCatering = () => {
     return date.toISOString().split('T')[0];
   };
 
+  useEffect(() => {
+  document.title = "Book Now | Miyato Hibachi Dallas";
+  }, []);
+
   return (
     <div className="min-h-screen bg-slate-50">
       <Navbar />
@@ -275,7 +279,7 @@ const BookCatering = () => {
 
           {/* Header */}
           <div className="text-center mb-12">
-            <span className="inline-block bg-amber-100 text-amber-800 text-sm font-medium px-4 py-2 rounded-full mb-4">
+            <span className="inline-block bg-amber-100 text-amber-800 text-md font-medium px-4 py-2 rounded-full mb-4">
               Book Your Hibachi Experience
             </span>
             <h1 className="text-4xl font-bold text-[#E78229] mb-4">Book Live Hibachi Catering</h1>
