@@ -39,7 +39,7 @@ const Body = () => {
               isVisible ? 'transform translate-y-0 opacity-100' : 'transform translate-y-10 opacity-0'
             }`}>
               <div className="mb-6">
-                <span className="inline-block bg-amber-100 text-amber-800 text-sm font-medium px-4 py-2 rounded-full mb-4">
+                <span className="inline-block bg-amber-100 text-amber-800 text-md font-semibold px-4 py-2 rounded-full mb-4">
                   Live Catering
                 </span>
                 <h1 className="text-5xl md:text-6xl font-bold text-[#E78229] leading-tight mb-6">
@@ -62,12 +62,7 @@ const Body = () => {
                 >
                   Book Your Event
                 </Link>
-                <Link 
-                  to="/menu"
-                  className="border-2 border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 text-center"
-                >
-                  View Menu
-                </Link>
+               
               </div>
 
               {/* Quick Stats */}
@@ -113,7 +108,7 @@ const Body = () => {
           
           {/* Section Header */}
           <div className="text-center mb-16">
-            <span className="inline-block bg-slate-100 text-slate-700 text-sm font-medium px-4 py-2 rounded-full mb-4">
+            <span className="inline-block bg-slate-100 text-slate-700 text-md font-semibold px-4 py-2 rounded-full mb-4">
               Catering Packages
             </span>
             <h2 className="text-4xl font-bold text-slate-900 mb-6">Choose Your Hibachi Package</h2>
@@ -127,104 +122,116 @@ const Body = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
 
             {/* Duo Package - Most Popular */}
-            <div 
-              className={`bg-white border-2 rounded-xl p-6 relative hover:shadow-lg transition-all duration-300 cursor-pointer ${
-                selectedPackage === 'duo' ? 'border-[#FF7E21] bg-orange-50 shadow-lg' : 'border-[#FF7E21]'
-              }`}
-              onClick={() => handlePackageSelect('duo')}
-            >
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <span className="bg-[#FF7E21] text-white px-3 py-1 rounded-full text-xs font-medium">
-                  MOST POPULAR
-                </span>
-              </div>
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">Duo — Any 2 Proteins</h3>
-                <div className="text-3xl font-bold text-[#FF7E21] mb-1">$57</div>
-                <div className="text-sm text-slate-500">per person</div>
-              </div>
-              <ul className="space-y-2 text-sm text-slate-600 mb-6">
-                <li>✓ 1 Chef & 1 Server</li>
-                <li>✓ Starter salad with signature ginger dressing</li>
-                <li>✓ 2 Proteins: Steak / Shrimp / Chicken / Salmon / Mahi-Mahi / Tuna</li>
-                <li>✓ Upgrades: Scallop +$7 | Filet +$15 | Lobster +$20</li>
-                <li>✓ Hibachi fried rice</li>
-                <li>✓ Assorted grilled vegetables</li>
-                <li>✓ Yum-yum sauce & hot sauce</li>
-                <li>✓ Live hibachi cooking show</li>
-              </ul>
-              <Link
-                to="/book-catering"
-                className="w-full bg-[#FF7E21] hover:bg-[#e66a1c] text-white py-3 px-4 rounded-lg font-semibold transition-colors text-center block text-sm"
-              >
-                Book This Package
-              </Link>
-            </div>
+            {/* Duo Package */}
+<div 
+  className={`bg-white border-2 rounded-xl p-6 relative hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col ${
+    selectedPackage === 'duo' ? 'border-[#FF7E21] bg-orange-50 shadow-lg' : 'border-[#FF7E21]'
+  }`}
+  onClick={() => handlePackageSelect('duo')}
+>
+  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+    <span className="bg-[#FF7E21] text-white px-3 py-1 rounded-full text-xs font-medium">
+      MOST POPULAR
+    </span>
+  </div>
+  <div className="flex-1">
+    <div className="text-center mb-6">
+      <h3 className="text-2xl font-bold text-slate-900 mb-2">Duo — Any 2 Proteins</h3>
+      <div className="text-3xl font-bold text-[#FF7E21] mb-1">$57</div>
+      <div className="text-sm text-slate-500">per person</div>
+    </div>
+    <ul className="space-y-2 text-sm text-slate-600 mb-6">
+      <li>✓ 1 Chef & 1 Server</li>
+      <li>✓ Starter salad with signature ginger dressing</li>
+      <li>✓ 2 Proteins: Steak / Shrimp / Chicken / Salmon / Mahi-Mahi / Tuna</li>
+      <li>✓ Upgrades: Scallop +$7 | Filet +$15 | Lobster +$20</li>
+      <li>✓ Hibachi fried rice</li>
+      <li>✓ Assorted grilled vegetables</li>
+      <li>✓ Yum-yum sauce & hot sauce</li>
+      <li>✓ Live hibachi cooking show</li>
+    </ul>
+  </div>
+  <Link
+    to="/book-catering"
+    className="w-full bg-[#FF7E21] hover:bg-[#e66a1c] text-white py-3 px-4 rounded-lg font-semibold transition-colors text-center block text-sm mt-auto"
+  >
+    Book This Package
+  </Link>
+</div>
 
-            {/* Trio Package */}
-            <div 
-              className={`bg-white border-2 rounded-xl p-6 hover:shadow-lg transition-all duration-300 cursor-pointer ${
-                selectedPackage === 'trio' ? 'border-[#FF7E21] bg-orange-50 shadow-lg' : 'border-slate-200'
-              }`}
-              onClick={() => handlePackageSelect('trio')}
-            >
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">Trio — Any 3 Proteins</h3>
-                <div className="text-3xl font-bold text-[#FF7E21] mb-1">$67</div>
-                <div className="text-sm text-slate-500">per person</div>
-              </div>
-              <ul className="space-y-2 text-sm text-slate-600 mb-6">
-                <li>✓ 1 Chef & 1 Server</li>
-                <li>✓ Starter salad with signature ginger dressing</li>
-                <li>✓ 3 Proteins: Steak / Shrimp / Chicken / Salmon / Mahi-Mahi / Tuna</li>
-                <li>✓ Upgrades: Scallop +$7 | Filet +$15 | Lobster +$20</li>
-                <li>✓ Hibachi fried rice</li>
-                <li>✓ Assorted grilled vegetables</li>
-                <li>✓ Yum-yum sauce & hot sauce</li>
-                <li>✓ Live hibachi cooking show</li>
-              </ul>
-              <Link
-                to="/book-catering"
-                className="w-full bg-[#FF7E21] hover:bg-[#e66a1c] text-white py-3 px-4 rounded-lg font-semibold transition-colors text-center block text-sm"
-              >
-                Book This Package
-              </Link>
-            </div>
+{/* Trio Package */}
+<div 
+  className={`bg-white border-2 rounded-xl p-6 relative hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col ${
+    selectedPackage === 'trio' ? 'border-[#FF7E21] bg-orange-50 shadow-lg' : 'border-slate-200'
+  }`}
+  onClick={() => handlePackageSelect('trio')}
+>
+  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 invisible">
+    <span className="bg-transparent px-3 py-1 rounded-full text-xs font-medium">
+      PLACEHOLDER
+    </span>
+  </div>
+  <div className="flex-1">
+    <div className="text-center mb-6">
+      <h3 className="text-2xl font-bold text-slate-900 mb-2">Trio — Any 3 Proteins</h3>
+      <div className="text-3xl font-bold text-[#FF7E21] mb-1">$67</div>
+      <div className="text-sm text-slate-500">per person</div>
+    </div>
+    <ul className="space-y-2 text-sm text-slate-600 mb-6">
+      <li>✓ 1 Chef & 1 Server</li>
+      <li>✓ Starter salad with signature ginger dressing</li>
+      <li>✓ 3 Proteins: Steak / Shrimp / Chicken / Salmon / Mahi-Mahi / Tuna</li>
+      <li>✓ Upgrades: Scallop +$7 | Filet +$15 | Lobster +$20</li>
+      <li>✓ Hibachi fried rice</li>
+      <li>✓ Assorted grilled vegetables</li>
+      <li>✓ Yum-yum sauce & hot sauce</li>
+      <li>✓ Live hibachi cooking show</li>
+    </ul>
+  </div>
+  <Link
+    to="/book-catering"
+    className="w-full bg-[#FF7E21] hover:bg-[#e66a1c] text-white py-3 px-4 rounded-lg font-semibold transition-colors text-center block text-sm mt-auto"
+  >
+    Book This Package
+  </Link>
+</div>
 
-            {/* Kids Meal Package */}
-            <div 
-              className={`bg-gradient-to-br from-slate-50 to-slate-100 border-2 rounded-xl p-6 relative hover:shadow-lg transition-all duration-300 cursor-pointer ${
-                selectedPackage === 'kids' ? 'border-[#FF7E21] bg-orange-50 shadow-lg' : 'border-slate-300'
-              }`}
-              onClick={() => handlePackageSelect('kids')}
-            >
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <span className="bg-slate-900 text-white px-3 py-1 rounded-full text-xs font-medium">
-                  KIDS (10 & UNDER)
-                </span>
-              </div>
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">Kids Meal</h3>
-                <div className="text-3xl font-bold text-slate-900 mb-1">$37</div>
-                <div className="text-sm text-slate-500">per person</div>
-              </div>
-              <ul className="space-y-2 text-sm text-slate-600 mb-6">
-                <li>✓ 1 Chef & 1 Server</li>
-                <li>✓ Starter salad with signature ginger dressing</li>
-                <li>✓ 1 Protein: Steak / Shrimp / Chicken</li>
-                <li>✓ Upgrades: Scallop +$7 | Filet +$15 | Lobster +$20</li>
-                <li>✓ Hibachi fried rice</li>
-                <li>✓ Assorted grilled vegetables</li>
-                <li>✓ Yum-yum sauce & hot sauce</li>
-                <li>✓ Live hibachi cooking show</li>
-              </ul>
-              <Link
-                to="/book-catering"
-                className="w-full bg-slate-900 hover:bg-slate-800 text-white py-3 px-4 rounded-lg font-semibold transition-colors text-center block text-sm"
-              >
-                Book This Package
-              </Link>
-            </div>
+{/* Kids Meal Package */}
+<div 
+  className={`bg-gradient-to-br from-slate-50 to-slate-100 border-2 rounded-xl p-6 relative hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col ${
+    selectedPackage === 'kids' ? 'border-[#FF7E21] bg-orange-50 shadow-lg' : 'border-slate-300'
+  }`}
+  onClick={() => handlePackageSelect('kids')}
+>
+  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+    <span className="bg-slate-900 text-white px-3 py-1 rounded-full text-xs font-medium">
+      KIDS (10 & UNDER)
+    </span>
+  </div>
+  <div className="flex-1">
+    <div className="text-center mb-6">
+      <h3 className="text-2xl font-bold text-slate-900 mb-2">Kids Meal</h3>
+      <div className="text-3xl font-bold text-slate-900 mb-1">$37</div>
+      <div className="text-sm text-slate-500">per person</div>
+    </div>
+    <ul className="space-y-2 text-sm text-slate-600 mb-6">
+      <li>✓ 1 Chef & 1 Server</li>
+      <li>✓ Starter salad with signature ginger dressing</li>
+      <li>✓ 1 Protein: Steak / Shrimp / Chicken</li>
+      <li>✓ Upgrades: Scallop +$7 | Filet +$15 | Lobster +$20</li>
+      <li>✓ Hibachi fried rice</li>
+      <li>✓ Assorted grilled vegetables</li>
+      <li>✓ Yum-yum sauce & hot sauce</li>
+      <li>✓ Live hibachi cooking show</li>
+    </ul>
+  </div>
+  <Link
+    to="/book-catering"
+    className="w-full bg-slate-900 hover:bg-slate-800 text-white py-3 px-4 rounded-lg font-semibold transition-colors text-center block text-sm mt-auto"
+  >
+    Book This Package
+  </Link>
+</div>
 
           </div>
 
@@ -237,15 +244,15 @@ const Body = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="text-center">
+              <div className="text-center border border-gray-200 shadow-md p-4 rounded-md">
                 <h4 className="font-semibold text-slate-900 mb-3">Choose Your Proteins</h4>
                 <p className="text-sm text-slate-600">Steak, Shrimp, Chicken, Salmon, Mahi-Mahi, or Tuna. Upgrade to Scallop, Filet Mignon, or Lobster.</p>
               </div>
-              <div className="text-center">
+              <div className="text-center border border-gray-200 shadow-md p-4 rounded-md">
                 <h4 className="font-semibold text-slate-900 mb-3">Full Hibachi Sides</h4>
                 <p className="text-sm text-slate-600">Starter salad with signature ginger dressing, hibachi fried rice, and assorted grilled vegetables.</p>
               </div>
-              <div className="text-center">
+              <div className="text-center border border-gray-200 shadow-md p-4 rounded-md">
                 <h4 className="font-semibold text-slate-900 mb-3">Sauces & Service</h4>
                 <p className="text-sm text-slate-600">Yum-yum sauce, hot sauce, 1 professional chef and 1 server for your entire event.</p>
               </div>
@@ -465,13 +472,13 @@ const Body = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/book-catering"
-              className="bg-[#EB7100] hover:bg-amber-500 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300"
+              className="bg-[#EB7100] hover:bg-[#EB7100]/90 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300"
             >
               Book Your Event Now
             </Link>
             <Link
               to="/contact"
-              className="border-2 border-white text-white hover:bg-[#EB7100] hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300"
+              className="border-2 border-white/30 text-white hover:bg-[#EB7100] hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300"
             >
               Get a Quote
             </Link>
@@ -480,7 +487,7 @@ const Body = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 bg-[#1C1D21] border-t border-gray-400">
+      <footer className="py-8 bg-[#1C1D21] border-t border-gray-700">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <p className="text-white">&copy; 2025 Miyato Hibachi Dallas. All rights reserved.</p>
         </div>
