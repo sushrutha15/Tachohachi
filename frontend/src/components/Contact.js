@@ -346,8 +346,8 @@ const Contact = () => {
                   <span className="font-medium">Monday - Sunday</span>
                   <span className="font-semibold">10:00 AM - 11:00 PM</span>
                 </div>
-                <div className="mt-6 p-4 bg-white bg-opacity-10 rounded-lg">
-                  <p className="text-sm">
+                <div className="mt-6 p-4 bg-[#f5f2f0] bg-opacity-10 rounded-lg">
+                  <p className="text-md text-black">
                     <strong>Call or Text:</strong> (972) 589-1422 for same-day
                     or urgent requests!
                   </p>
