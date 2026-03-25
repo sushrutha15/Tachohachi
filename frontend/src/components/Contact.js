@@ -149,7 +149,7 @@ const Contact = () => {
 
           {/* Contact Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300">
+            <div className=" border border-slate-200 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300">
               <h3 className="text-xl font-medium text-[#E78229] mb-4">Service Area</h3>
               <div className="space-y-2">
                 <p className="text-slate-600">Dallas-Fort Worth Metroplex</p>
@@ -157,21 +157,21 @@ const Contact = () => {
                 <p className="text-slate-600">Custom travel available</p>
               </div>
             </div>
-            <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300">
+            <div className=" border border-slate-200 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300">
               <h3 className="text-xl font-medium text-[#E78229] mb-4">Call Us</h3>
               <div className="space-y-2">
                 <p className="text-slate-600 font-semibold">(972) 589-1422</p>
                 <p className="text-slate-600">Mon-Sun: 9AM - 8PM</p>
               </div>
             </div>
-            <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300">
+            <div className=" border border-slate-200 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300">
               <h3 className="text-xl font-medium text-[#E78229] mb-4">Email Us</h3>
               <div className="space-y-2">
                 <p className="text-slate-600">salinaseduardo275@gmail.com</p>
                 <p className="text-slate-600">We reply within 4 hours</p>
               </div>
             </div>
-            <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300">
+            <div className=" border border-slate-200 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300">
               <h3 className="text-xl font-medium text-[#E78229] mb-4">Event Types</h3>
               <div className="space-y-2">
                 <p className="text-slate-600">Corporate Events</p>
